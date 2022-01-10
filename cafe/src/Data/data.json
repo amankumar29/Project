@@ -3,6 +3,79 @@
         "./img/banner/banner1.jpg",
         "./img/banner/banner2.jpg",
         "./img/banner/banner3.jpg"
+    ],
+    "pizza": [
+        {
+            "name": "Garden Fresh Veggie Pizza",
+            "price": 249,
+            "image":"./img/pizza/Garden Fresh Veggie Pizza.jpg",
+            "Desc": "An abundance of delicious veggies with less crust - a perfect Garden Fresh Pizza! Jalapenos, Corn, Black Olives, Crunchy Bell Peppers, Tomatoes, Onion & Mozzarella Cheese on an herbed and soft crust."
+        },
+        {
+            "name": "Exotica Paneer Pizza",
+            "price": 299,
+            "image":"./img/pizza/Exotica Paneer Pizza.jpg",
+            "Desc": "More chunky paneer, less bread - a perfect match made in the cheese heaven! Tender Paneer Tikka, Corn, Onion & Mozzarella Cheese, topped up till the end of a soft crust."
+            
+        },
+        {
+            "name": "Double Cheese Margherita Pizza",
+            "price": 199,
+            "image":"./img/pizza/Double Cheese Pizza.jpg",
+            "Desc": "Cheese the day with our double cheese Margherita pizza, with as much cheese as there can be! Brimming with Mozzarella Cheese and a hint of parsley, on a herby and soft crust."
+
+        },
+        {
+            "name": "Smoked Chicken Sausage Pizza",
+            "price": 349,
+            "image":"./img/pizza/Smoked chicken Sausage Pizza.jpg",
+            "Desc": "If you havent tried this smoky deliciousness, you havent stumbled upon your new favourite yet! Smoked Chicken Sausages, Crunchy Capsicum, Onion and Mozzarella Cheese on a soft crust."
+
+        },
+        {
+            "name": "Kheema and Sausage Pizza",
+            "price": 349,
+            "image":"./img/pizza/Kheema and Sausages Pizza.jpg",
+            "Desc": "More chunky paneer, less bread - a perfect match made in the cheese heaven! Tender Paneer Tikka, Corn, Onion & Mozzarella Cheese, topped up till the end of a soft crust."
+
+        },
+        {
+            "name": "Corn Veggie Delight Pizza",
+            "price": 225,
+            "image":"./img/pizza/Corn Veggie Delight Pizza.jpg",
+            "Desc": "MAn exuberance of Golden Corn, Onions, Tomatoes and plenty of crunchy Green Bell Peppers with no bready crust to leave behind."
+
+        },
+        {
+            "name": "Spanish Sunshine Pizza",
+            "price": 299,
+            "image":"./img/pizza/Spanish Sunshine Pizza.jpg",
+            "Desc": "Enjoy a colorful abundance of veggies in this tasteful combination. Tell us gracias later! American Corn, Jalapenos, Crunchy Capsicum,Tomatoes, Onion & Mozzarella Cheese on a soft crust."
+
+        },
+        {
+            "name": "Supreme Cheese Burst Pizza",
+            "price": 249,
+            "image":"./img/pizza/Supreme Cheese Burst Pizza.jpg",
+            "Desc": "Oozing with a cheesy abundance! Feel the delicate Mediterranean flavours come alive in every bite with Falafels, Roasted Crunchy Veggies and Mozzarella Cheese on a soft crust."
+
+        },
+        {
+            "name": "Butter Chicken Cheese Burst Pizza",
+            "price": 449,
+            "image":"./img/pizza/Butter Chicken Cheese Burst Pizza.jpg",
+            "Desc": "MAn exuberance of Golden Corn, Onions, Tomatoes and plenty of crunchy Green Bell Peppers with no bready crust to leave behind."
+
+        },
+        {
+            "name": "Cheese Burst Pizza",
+            "price": 199,
+            "image":"./img/pizza/Cheese Burst Pizza.jpg",
+            "Desc": "Gooey deliciousness for your cheese-tooth! Relish our awesome five-some Tender Paneer Tikka, Jalapenos, Black Olives, American Corn & Onion with Mozzarella Cheese on a soft crust"
+
+        }
+       
+
     ]
 }
 

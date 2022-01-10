@@ -5,6 +5,7 @@ import Login from "./Component/navbar/Login";
 import Cart from "./Component/navbar/Cart";
 import Slider from "./Component/Slider";
 import banner from "./Data/data.json";
+import Card from "./Component/Card";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
     </Routes>
     </Router>
     <Slider banner = {banner} />
+    <Card />
     
     </>
   );

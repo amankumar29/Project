@@ -7,13 +7,15 @@ const cartIcon = <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="
 const Navbar =()=>{
     return(
        <>
-       <nav className="navbar navbar-expand-lg navbar-dark bg-dark nav justify-content-center  ">
+       <nav className="navbar navbar-expand-lg navbar-dark bg-dark nav  justify-content-between">
             <Link to="Home" ><img src={logo} alt="logo" width="270" height="50" className="d-inline-block align-center"/></Link>
-            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            {/* <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
-            </button>
-            <Link to="Login" className="nav-link justify-content-right" >Login</Link>
-            <Link to="Cart" className="nav-link ">{cartIcon}  Cart</Link>
+            </button> */}
+            <div className="d-flex justify-content-end">
+                <Link to="Login" className="nav-link justify-content-right" >Login</Link>
+                <Link to="Cart" className="nav-link ">{cartIcon}  Cart</Link>
+            </div>
             
        </nav>   
        </>
