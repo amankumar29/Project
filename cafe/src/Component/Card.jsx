@@ -12,6 +12,7 @@ const Card = () => {
 
             <Row>
             <Product product={data} />
+            
             </Row>
         </Container>
         </>
