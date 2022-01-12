@@ -12,8 +12,8 @@ const Slider = (props) => {
         {/* <img src="./img/banner/banner1.jpg" alt="pizza" /> */}
         {/* <h6>{JSON.stringify(props.banner)}</h6> */}
         <Carousel fade>
-            {props.banner.start.map((item)=>(
-                <Carousel.Item>
+            {props.banner.start.map((item,index)=>(
+                <Carousel.Item key={index}>
                     <img
                      className="d-block w-100"
                      src={item}

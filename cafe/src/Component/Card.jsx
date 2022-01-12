@@ -8,7 +8,7 @@ const Card = () => {
         <>
         {/* <h6>{JSON.stringify(data.pizza)} </h6> */}
         <Container>
-            <header><h1>Pizza</h1></header>
+            <header><h1 className='text-center home-menu ' style={{fontFamily:'sans-serif'}} >Menu</h1></header>
 
             <Row>
             <Product product={data} />

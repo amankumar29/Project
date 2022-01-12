@@ -6,12 +6,14 @@ import Cart from "./Component/navbar/Cart";
 import Slider from "./Component/Slider";
 import banner from "./Data/data.json";
 import Card from "./Component/Card";
+import './App.css'
 
 function App() {
   return (
     <>
     {/* <h6>{JSON.stringify(banner)}</h6> */}
     
+    <div className="App">
     <Router>
     <Navbar />
     <Routes>
@@ -22,6 +24,7 @@ function App() {
     </Router>
     <Slider banner = {banner} />
     <Card />
+    </div>
     
     </>
   );
