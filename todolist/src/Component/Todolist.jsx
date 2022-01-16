@@ -31,12 +31,15 @@ const Todolist = () => {
 
     }
     // const [name,setName] = useState("")
-    const remove=()=>{
-        console.log("id inside remove");
-        const updatedData=submitData.filter(()=>{
-            
-        }) 
-    }
+            // to delete the items
+
+        const deleteItem = (id)=>{
+            console.log("click id",id);
+            const deleteData = submitData.filter((cur)=>{
+                return cur.id!==id
+            })
+            setSubmitData(deleteData)
+        }   
     return (
         <>
         {/* <h6>{JSON.stringify(submitData)}</h6> */}
@@ -137,14 +140,15 @@ const Todolist = () => {
                    {submitData.map((ele,index)=>{
                        const {id,name,project,task,status,start,end}=ele
                        return  <tr key={id}>
-                       <td>{id}</td>
+                       <td>{index+1}</td>
                        <td>{name}</td>
                        <td>{project}</td>
                        <td>{task}</td>
                        <td>{status}</td>
                        <td>{start}</td>
                        <td>{end}</td>
-                       <td><i className="mr-4 fas fa-edit"></i><i className="fas fa-trash-alt" onClick={remove}></i></td>
+                       <td><i className="mr-4 fas fa-edit"></i>
+                       <i className="fas fa-trash-alt" onClick={()=> deleteItem(ele.id) }></i></td>
                    </tr>
                    })}
                 </tbody>

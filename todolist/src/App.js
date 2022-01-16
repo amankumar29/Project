@@ -4,7 +4,7 @@ function App() {
   
   return (
     <>
-    <h1>Hello check</h1>
+    
     <Todolist />
     </>
   );
