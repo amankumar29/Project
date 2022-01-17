@@ -1,6 +1,9 @@
 import React from 'react'
 
 const Table = (props) => {
+    const deleteItem = (id) =>{
+            console.log(id);
+    }
     return (
         <>
             {/* <h4>{JSON.stringify(props.data)}</h4> */}
@@ -24,7 +27,10 @@ const Table = (props) => {
                         <td>{email}</td>
                         <td>{mobile}</td>
                         <td>{task}</td>
-                        <td><i class="far fa-edit"></i><i class="far fa-trash-alt"></i></td>
+                        <td>
+                        <i class="far fa-edit"></i>
+                        <i class="far fa-trash-alt" onClick={()=>deleteItem(ele.id)} style={{cursor:"pointer"}}></i>
+                        </td>
                     </tr>
                     })}
                 </tbody>

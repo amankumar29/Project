@@ -85,7 +85,7 @@ const Todolist = () => {
             <div className="form-group col-md-2">
             <div className="form-group">
             <div className="form-check">
-            <input className="form-check-input" type="radio" name="planned" onChange={e=>setStatus(e.target.name)} />
+            <input className="form-check-input" type="radio" name="planned" onChange={e=>setStatus(e.target.name)}  value="option1"/>
             <label className="form-check-label">
             Planned
             </label>
@@ -147,8 +147,13 @@ const Todolist = () => {
                        <td>{status}</td>
                        <td>{start}</td>
                        <td>{end}</td>
-                       <td><i className="mr-4 fas fa-edit"></i>
-                       <i className="fas fa-trash-alt" onClick={()=> deleteItem(ele.id) }></i></td>
+                       <td>
+                        <i className="mr-4 fas fa-edit"
+                        style={{cursor:"pointer"}}></i>
+                        <i className="fas fa-trash-alt" 
+                        onClick={()=> deleteItem(ele.id) } 
+                        style={{cursor:"pointer"}}></i>
+                        </td>
                    </tr>
                    })}
                 </tbody>
