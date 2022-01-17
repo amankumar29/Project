@@ -1,14 +1,13 @@
-
 import Task from "./Component/Task";
+import Radio from "./Component/Radio";
+
 function App() {
-  // console.log("Welcome to PSA")
-  
   return (
-    <>
-    
-    
-    <Task />
-    </>
+   <>
+   <Task/>
+   <Radio/>
+   
+   </>
   );
 }
 

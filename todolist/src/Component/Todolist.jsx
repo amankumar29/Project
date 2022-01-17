@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+// import { useFormik } from "formik";
+// import * as yup from "yup";
 
 const Todolist = () => {
     const [name,setName] = useState("")
@@ -11,10 +13,12 @@ const Todolist = () => {
     const [end,setEnd] = useState("")
     const [id,setId] = useState(1)
     const [submitData,setSubmitData] = useState([])
+
+
     
     const onSubmit=(e)=>{
-        e.preventDefault();
-        
+        e.preventDefault()
+        // formik.handleSubmit()
         setId(id+1);
         const data={
             id:id,
@@ -112,6 +116,7 @@ const Todolist = () => {
             </div>
             </div>
             </div>
+        
             </div>
             <div className="form-row">
             <div className="col-md-4" style={{textAlign:"center"}}>
