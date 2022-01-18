@@ -25,8 +25,9 @@ const Todolist = () => {
   const [editId, setEditId] = useState(null);
 
   const onSubmit = (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     reset();
+    // console.log("name and email",name,email)
     
 
     setId(id + 1);
@@ -55,7 +56,7 @@ const Todolist = () => {
   };
   return (
     <>
-      {/* <h6>{JSON.stringify(submitData)}</h6> */}
+      {/* <h6>data here={JSON.stringify(submitData)}</h6> */}
       <h1 style={{ textAlign: "center" }}>To-Do-List</h1>
       <form style={{ marginLeft: "360px" }} onSubmit={handleSubmit(onSubmit)}>
         <div className="form-row">
