@@ -1,5 +1,5 @@
 
-import Task from "./Component/Task";
+import Task from "./Component/Todolist";
 function App() {
   // console.log("Welcome to PSA")
   
