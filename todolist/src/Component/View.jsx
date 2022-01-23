@@ -365,7 +365,6 @@ const Todolist = () => {
               onClick={() => {
                 setView(true);
               }}
-
               className="btn-btn-danger"
             >
               View

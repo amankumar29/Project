@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, {  useState } from "react";
 import Edit from "./Edit";
 import { useForm } from "react-hook-form";
 
@@ -22,14 +22,7 @@ const Todolist = () => {
   const [id, setId] = useState(1);
   const [submitData, setSubmitData] = useState([]);
 
-  const [defaultData, setDefaultData] = useState(false);
-  const [plannedData, setPlannedData] = useState(false);
-  const [progressData, setProgressData] = useState(false);
-  const [doneData, setDoneData] = useState(false);
-  const [view, setView] = useState(false);
-  const [save, setSave] = useState(false);
 
-  const [data, setData] = useState(submitData);
 
   const [showModal, setShowModal] = useState(false);
   const [editId, setEditId] = useState(null);
@@ -57,49 +50,14 @@ const Todolist = () => {
   // to delete
 
   const deleteItem = (id) => {
-    const deleteData = data.filter((cur) => {
+    const deleteData = submitData.filter((cur) => {
       return cur.id !== id;
     });
-    setData(deleteData);
+    setSubmitData(deleteData);
   };
-  /* useEffect(()=>{
-    deleteItem();
-  },[]) */
+ 
 
-  const pData =
-    submitData &&
-    submitData.length > 0 &&
-    submitData.filter((data) => data.status === "Planned");
-
-  const iData =
-    submitData &&
-    submitData.length > 0 &&
-    submitData.filter((data) => data.status === "In-Progress");
-
-  const dData =
-    submitData &&
-    submitData.length > 0 &&
-    submitData.filter((data) => data.status === "Done");
-
-  useEffect(() => {
-    if (view && status === "Planned") {
-      setData(pData);
-    } else if (view && status === "In-Progress") {
-      setData(iData);
-    } else if (view && status === "Done") {
-      setData(dData);
-    }
-  }, [view, status]);
-
-  useEffect(() => {
-    if (save === true) {
-      setData(submitData);
-    }
-  }, [save, submitData]);
-
-  console.log("data", data);
-  console.log("save", save);
-  // console.log("data", data);
+ 
 
   return (
     <>
@@ -111,7 +69,7 @@ const Todolist = () => {
             <input
               type="text"
               placeholder="Enter Person Name"
-              className={`form-control $ {errors.name && "invalid"}`}
+              className={'form-control $ {errors.name && "invalid"}'}
               {...register("name", {
                 required: "Name is Required",
                 minLength: {
@@ -142,7 +100,7 @@ const Todolist = () => {
             <input
               type="email"
               placeholder="Enter A Valid Email ID "
-              className={`form-control $ {errors.email && "invalid"}`}
+              className={'form-control $ {errors.email && "invalid"}'}
               {...register("email", {
                 required: "Email is Required",
                 pattern: {
@@ -165,7 +123,7 @@ const Todolist = () => {
             <input
               type="text"
               placeholder="Enter A Valid Mobile Number "
-              className={`form-control $ {errors.mobile && "invalid"}`}
+              className={'form-control $ {errors.mobile && "invalid"}'}
               {...register("mobile", {
                 required: "Mobile Number is Required",
                 minLength: {
@@ -196,7 +154,7 @@ const Todolist = () => {
             <input
               type="text"
               placeholder="Enter Project Name "
-              className={`form-control $ {errors.project && "invalid"}`}
+              className={'form-control $ {errors.project && "invalid"}'}
               {...register("project", {
                 required: "Project name is Required",
                 minLength: {
@@ -227,7 +185,7 @@ const Todolist = () => {
             <input
               type="text"
               placeholder="Enter Task Description "
-              className={`form-control $ {errors.task && "invalid"}`}
+              className={'form-control $ {errors.task && "invalid"}'}
               {...register("task", {
                 required: "Task description is Required",
                 minLength: {
@@ -255,7 +213,7 @@ const Todolist = () => {
             <input
               type="date"
               placeholder="Start Date "
-              className={`form-control $ {errors.start && "invalid"}`}
+              className={'form-control $ {errors.start && "invalid"}'}
               {...register("start", { required: "Mention Start Date" })}
               onKeyUp={() => {
                 trigger("start");
@@ -273,7 +231,7 @@ const Todolist = () => {
             <input
               type="date"
               placeholder="Target Date "
-              className={`form-control $ {errors.end && "invalid"}`}
+              className={'form-control $ {errors.end && "invalid"}'}
               {...register("end", { required: "Mention Target Date" })}
               onKeyUp={() => {
                 trigger("end");
@@ -296,13 +254,8 @@ const Todolist = () => {
               name="inlineRadioOptions"
               id="inlineRadio1"
               value="option1"
-              onChange={(e) => {
-                setStatus("Planned");
-                setDefaultData(false);
-                setPlannedData(true);
-                setProgressData(false);
-                setDoneData(false);
-              }}
+              onChange={(e) => setStatus("Planned")}
+              
             />
             <label className="form-check-label" for="inlineRadio1">
               Planned
@@ -315,13 +268,7 @@ const Todolist = () => {
               name="inlineRadioOptions"
               id="inlineRadio2"
               value="option2"
-              onChange={() => {
-                setStatus("In-Progress");
-                 setDefaultData(false);
-                setPlannedData(false);
-                setProgressData(true);
-                setDoneData(false);
-              }}
+              onChange={ (e) => setStatus("In-Progress")}
             />
             <label className="form-check-label" for="inlineRadio2">
               In-Progress
@@ -334,13 +281,7 @@ const Todolist = () => {
               name="inlineRadioOptions"
               id="inlineRadio3"
               value="option3"
-              onChange={() => {
-                setStatus("Done");
-                setDefaultData(false);
-                setPlannedData(false);
-                setProgressData(false);
-                setDoneData(true);
-              }}
+              onChange={(e) => setStatus("Done")}
             />
             <label className="form-check-label" for="inlineRadio3">
               Done
@@ -351,10 +292,6 @@ const Todolist = () => {
           <div className="col-md-4" style={{ textAlign: "center" }}>
             <button
               type="submit"
-              onClick={() => {
-                setSave(true);
-                setView(false);
-              }}
               className="btn-btn-primary"
             >
               Save
@@ -362,10 +299,6 @@ const Todolist = () => {
           </div>
           <div className="col-md-4" style={{ textAlign: "center" }}>
             <button
-              onClick={() => {
-                setView(true);
-              }}
-
               className="btn-btn-danger"
             >
               View
@@ -374,7 +307,7 @@ const Todolist = () => {
         </div>
       </form>
 
-      <talbe className="table mt-3 " style={{ marginLeft: "center" }}>
+      <table className="table mt-3 " style={{ marginLeft: "center" }}>
         <thead className="thead-light">
           <tr>
             <th>Sl.no</th>
@@ -388,9 +321,7 @@ const Todolist = () => {
           </tr>
         </thead>
         <tbody>
-          {data &&
-            data.length > 0 &&
-            data.map((ele, index) => {
+          {submitData.map((ele, index) => {
               const { id, name, project, task, status, start, end } = ele;
               return (
                 <tr key={id}>
@@ -420,11 +351,11 @@ const Todolist = () => {
               );
             })}
         </tbody>
-      </talbe>
+      </table>
 
       {showModal && (
         <Edit
-          submitData={data}
+          submitData={submitData}
           id={editId}
           setSubmitData={setSubmitData}
           showModal={showModal}

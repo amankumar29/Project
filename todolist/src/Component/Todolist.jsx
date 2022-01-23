@@ -280,8 +280,8 @@ const Todolist = () => {
             </button>
           </div>
           <div className="col-md-4" style={{ textAlign: "center" }}>
-            <button type="reset" className="btn btn-primary">
-              Clear
+            <button  className="btn btn-primary">
+              View
             </button>
           </div>
         </div>
